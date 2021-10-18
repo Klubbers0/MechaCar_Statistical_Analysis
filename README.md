@@ -27,7 +27,10 @@ The variance for entire manufacturing lot is 62.293 which meets the current manu
 
 ![pic3](https://github.com/Klubbers0/MechaCar_Statistical_Analysis/blob/e5c4a385fbfc5851497c5078ccb0a6403e2a0628/image3.PNG)
 ## T-Tests on Suspension Coils
-briefly summarize your interpretation and findings for the t-test results. Include screenshots of the t-test to support your summary.
+Lot 1 and Lot 3 the PSI values are not different from the population mean. However lot 2 the p-value is .347 which means there is evidence that the suspension coil is different from the population mean. Images of all T-tests are attached below. 
+
+![pic4](https://github.com/Klubbers0/MechaCar_Statistical_Analysis/blob/55691f7061e18422647e677febbe837b8c716a92/image4.PNG)
+![pic5](https://github.com/Klubbers0/MechaCar_Statistical_Analysis/blob/55691f7061e18422647e677febbe837b8c716a92/image5.PNG)
 
 ## Study Design: MechaCar vs Competition
 
