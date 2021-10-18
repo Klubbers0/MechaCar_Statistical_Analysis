@@ -63,7 +63,7 @@ Ha (Alternative Hypothesis) : MechaCar prototypes' average city and highway fuel
 
 *What statistical test would you use to test the hypothesis? And why?*
 
-The statistical test to test our hypothesis would be the two-sample t-test method. This t-test is widely used to test whether the unknown population means of two groups are equal or not. 
+The statistical test that will be used to test our hypothesis will be the two-sample t-test method. This t-test is widely used to test whether the unknown population means of two groups are equal or not. 
 
 *What data is needed to run the statistical test?* 
 
