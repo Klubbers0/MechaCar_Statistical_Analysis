@@ -1,4 +1,4 @@
-#Deliverable 1
+> #Deliverable 1
 > 
 > #load dplyr package
 > library(dplyr)
@@ -14,10 +14,10 @@ lm(formula = mpg ~ vehicle_length + vehicle_weight + spoiler_angle +
     ground_clearance + AWD, data = MechaCar)
 
 Coefficients:
-     (Intercept)    vehicle_length    vehicle_weight     spoiler_angle  
-      -1.040e+02         6.267e+00         1.245e-03         6.877e-02  
-ground_clearance               AWD  
-       3.546e+00        -3.411e+00  
+     (Intercept)    vehicle_length    vehicle_weight     spoiler_angle  ground_clearance  
+      -1.040e+02         6.267e+00         1.245e-03         6.877e-02         3.546e+00  
+             AWD  
+      -3.411e+00  
 
 > 
 > #perform summary
@@ -46,26 +46,27 @@ Residual standard error: 8.774 on 44 degrees of freedom
 Multiple R-squared:  0.7149,	Adjusted R-squared:  0.6825 
 F-statistic: 22.07 on 5 and 44 DF,  p-value: 5.35e-11
 
+> # Deliverable 2
 > 
-> #Deliverable 2
-> #read file
-> Suspension <- read.csv(file='Suspension_coil.csv',check.names=F,stringsAsFactors = F)
+> #2 Import and read the CSV file
+> coil_table <- read.csv(file = 'Suspension_Coil.csv')
 > 
-> #get a total summary
-> total_summary <- Suspension %>% summarize(Mean=mean(PSI),Median=(PSI),Variance=var(PSI),SD=sd(PSI)) 
+> #3 Create a total_summary df 
+> total_summary <- coil_table%>%data.frame()%>%summarize(Mean=mean(PSI),Median=median(PSI),Variance=var(PSI),SD=sd(PSI),)
 > 
-> #create a lot summary
-> lot_summary <- Suspension %>% group_by(Manufacturing_Lot) %>% summarize(Mean=mean(PSI),Median=(PSI),Variance=var(PSI),SD=sd(PSI))
-`summarise()` has grouped output by 'Manufacturing_Lot'. You can override using the `.groups` argument.
+> #4 Create a lot_summary df  
+> lot_summary <- coil_table%>%group_by(Manufacturing_Lot)%>%summarize(Mean=mean(PSI),Median=median(PSI),Variance=var(PSI),SD=sd(PSI), .groups = 'keep') 
 > 
-> #Deliverable 3 -----------------------------------------------------------
-> #perform t-test to determine if the PSI across 
-> # Peform t-test across all Lots
-> t.test(Suspension$PSI,mu = 1500)
+> View(total_summary)
+> View(lot_summary)
+> # Deliverable 3
+> 
+> #1 RScript using t.test() to determine PSI (all lots)
+> t.test(coil_table$PSI,mu=1500)
 
 	One Sample t-test
 
-data:  Suspension$PSI
+data:  coil_table$PSI
 t = -1.8931, df = 149, p-value = 0.06028
 alternative hypothesis: true mean is not equal to 1500
 95 percent confidence interval:
@@ -74,12 +75,13 @@ sample estimates:
 mean of x 
   1498.78 
 
-> # Peform t-test on Lot 1
-> t.test(subset(Suspension,Manufacturing_Lot=="Lot1")$PSI,mu = 1500)
+> 
+> #2 RScripts using t.test() & subset() for each lot
+> t.test(subset(coil_table, Manufacturing_Lot=="Lot1")$PSI,mu=1500) 
 
 	One Sample t-test
 
-data:  subset(Suspension, Manufacturing_Lot == "Lot1")$PSI
+data:  subset(coil_table, Manufacturing_Lot == "Lot1")$PSI
 t = 0, df = 49, p-value = 1
 alternative hypothesis: true mean is not equal to 1500
 95 percent confidence interval:
@@ -88,12 +90,11 @@ sample estimates:
 mean of x 
      1500 
 
-> # Peform t-test on Lot 2
-> t.test(subset(Suspension,Manufacturing_Lot=="Lot2")$PSI,mu = 1500)
+> t.test(subset(coil_table, Manufacturing_Lot=="Lot2")$PSI,mu=1500)
 
 	One Sample t-test
 
-data:  subset(Suspension, Manufacturing_Lot == "Lot2")$PSI
+data:  subset(coil_table, Manufacturing_Lot == "Lot2")$PSI
 t = 0.51745, df = 49, p-value = 0.6072
 alternative hypothesis: true mean is not equal to 1500
 95 percent confidence interval:
@@ -102,12 +103,11 @@ sample estimates:
 mean of x 
    1500.2 
 
-> # Peform t-test on Lot 3
-> t.test(subset(Suspension,Manufacturing_Lot=="Lot3")$PSI,mu = 1500)
+> t.test(subset(coil_table, Manufacturing_Lot=="Lot3")$PSI,mu=1500)
 
 	One Sample t-test
 
-data:  subset(Suspension, Manufacturing_Lot == "Lot3")$PSI
+data:  subset(coil_table, Manufacturing_Lot == "Lot3")$PSI
 t = -2.0916, df = 49, p-value = 0.04168
 alternative hypothesis: true mean is not equal to 1500
 95 percent confidence interval:
