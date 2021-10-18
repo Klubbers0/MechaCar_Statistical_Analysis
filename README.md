@@ -55,6 +55,9 @@ The results of the T-test for the suspension coils for Lot 2 showed that they ar
 
 The focus of our test would be to evaluate MechaCar's city and highway fuel efficiency in comparison to various competitors' vehicles.
 
-* *What is the null hypothesis or alternative hypothesis?
+ *What is the null hypothesis or alternative hypothesis?*
+H0 (Null Hypothesis): Mechacar prototypes' city and highway fuel efficiency is similar to the competitor's vehicle in the same class.
+
+Ha (Alternative Hypothesis) : MechaCar prototypes' average city and highway fuel efficiency is statistically above or below the competitor's vehicles.
 What statistical test would you use to test the hypothesis? And why?
 What data is needed to run the statistical test?* *
