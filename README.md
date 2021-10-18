@@ -19,6 +19,7 @@ This linear model has **R-squared: 0.7149**, which means that approximately 71% 
 *The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? Why or why not?*
 
 The variance for entire manufacturing lot is 62.293 which meets the current manufacturing design specification. The variance for Lot1 is 0.9795 and Lot2 is 7.4693 and these two lots also meet the design specification. However variance for Lot3 is 170.286 which exceeds the limit of 100 pounds per square inch and therefore Lot3 of suspension coils may not be accepted.
+
 **Total Manufacturing Lot**
 
 ![pic2](https://github.com/Klubbers0/MechaCar_Statistical_Analysis/blob/e5c4a385fbfc5851497c5078ccb0a6403e2a0628/image%202.PNG)
@@ -27,10 +28,24 @@ The variance for entire manufacturing lot is 62.293 which meets the current manu
 
 ![pic3](https://github.com/Klubbers0/MechaCar_Statistical_Analysis/blob/e5c4a385fbfc5851497c5078ccb0a6403e2a0628/image3.PNG)
 ## T-Tests on Suspension Coils
-Lot 1 and Lot 3 the PSI values are not different from the population mean. However lot 2 the p-value is .347 which means there is evidence that the suspension coil is different from the population mean. Images of all T-tests are attached below. 
 
-![pic4](https://github.com/Klubbers0/MechaCar_Statistical_Analysis/blob/55691f7061e18422647e677febbe837b8c716a92/image4.PNG)
-![pic5](https://github.com/Klubbers0/MechaCar_Statistical_Analysis/blob/55691f7061e18422647e677febbe837b8c716a92/image5.PNG)
+
+**All Lots**
+The results of the T-test for the suspension coils for all manufacturing lots showed that they are not statistically different from the population mean of 1500 PSI. P-value = 0.0603. Assuming the significance level of 0.05%, it can be stated that there was **not sufficient evidence** to reject our null hypothesis.
+![pic4](https://github.com/Klubbers0/MechaCar_Statistical_Analysis/blob/369ec59483d1154dd08a8c5a295458002a3ee211/image4.PNG)
+
+**Lot 1**
+The results of the T-test for the suspension coils for Lot 1 showed that they are not statistically different from the population mean of 1500 PSI. P-value = 1 . A p-value generally is not found to be 1; however, when values on both groups are the same, the p-value becomes 1 (0.99). Assuming the significance level of 0.05%, it can be stated that there was **not sufficient evidence** to reject our null hypothesis.
+
+![pic6](https://github.com/Klubbers0/MechaCar_Statistical_Analysis/blob/369ec59483d1154dd08a8c5a295458002a3ee211/image%206.PNG)
+
+**Lot 2**
+The results of the T-test for the suspension coils for Lot 2 showed that they are not statistically different from the population mean of 1500 PSI. P-value = 0.6072  Assuming the significance level of 0.05%, it can be stated that there was **not sufficient evidence** to reject our null hypothesis.
+
+![pic5](https://github.com/Klubbers0/MechaCar_Statistical_Analysis/blob/892f488892d1c08fc64b565ab0f33e4b34cb9a24/image5.PNG)
+
+**Lot3** The results of the T-test for the suspension coils for Lot 3 showed that there is a slight statistical difference from the population mean of 1500 PSI. P-value = 0.04168. Assuming the significance level of 0.05%, it can be stated that there was **not sufficient evidence** to reject our null hypothesis.
+![pic7](https://github.com/Klubbers0/MechaCar_Statistical_Analysis/blob/892f488892d1c08fc64b565ab0f33e4b34cb9a24/image7.PNG)
 
 ## Study Design: MechaCar vs Competition
 
