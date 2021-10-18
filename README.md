@@ -1,5 +1,7 @@
 # MechaCar Statistical Analysis
 
+
+![pic1](https://github.com/Klubbers0/Kickstarter-analysis/blob/main/resources/Outcomes%20Based%20on%20Goal.png)
 ## Linear Regression to Predict MPG
 Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
 The variables ground_clearance and vehicle_length (as well as the intercept) are statistically unlikely to provide random amounts of variance to the linear model, these variables have a significant impact on the miles per gallon on the MechaCar prototype
